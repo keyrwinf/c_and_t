@@ -10,4 +10,4 @@ Steps:
 
 Open [http://localhost:3001](http://localhost:3001) in your browser
 # or 
-You can access the app on [https://c-and-t-djzx.vercel.app/](Live preview)!
+You can access the app on [https://c-and-t-djzx.vercel.app](Live preview!)
