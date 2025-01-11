@@ -107,7 +107,8 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
         error: null,
       },
     };
-  } catch (_) {
+  } catch (error) {
+    console.error(error);
     return {
       props: {
         job: null,

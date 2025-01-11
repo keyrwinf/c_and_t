@@ -22,10 +22,7 @@ const Card = ({ job, tagsClicked = [], onTagClick, onClick }: CardProps) => {
         tablet:mb-0 tablet:flex-row tablet:items-center
         mobile:mb-8 mobile:flex-col mobile:items-start
       "
-      onClick={(e) => {
-        e.preventDefault();
-        onClick?.();
-      }}
+      onClick={onClick ?? undefined}
     >
       <div className="flex gap-4 items-center tablet:border-0 mobile:border-b mobile:border-primary mobile:w-full mobile:pb-4">
         <div className="mobile:block tablet:hidden desktop:hidden absolute top-[-30px] left-[20px]">
@@ -51,7 +48,6 @@ const Card = ({ job, tagsClicked = [], onTagClick, onClick }: CardProps) => {
       <div className="flex gap-2">
         {job.languages.map((language) => {
           const isClicked = tagsClicked.includes(language);
-          console.log({ isClicked });
           return (
             <Tag
               key={language}

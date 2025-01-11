@@ -2,13 +2,11 @@
 
 import { useCallback, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useTheme } from "@/contexts/theme-context";
 import Card from "@/components/molecules/Card";
 import { useJobs } from "@/services/api-hooks";
 import FilterTags from "@/components/molecules/FilterTags";
 
 export default function Home() {
-  const { isDarkMode } = useTheme();
   const router = useRouter();
   const { data, error, isLoading } = useJobs();
   const [tagsClicked, setTagsClicked] = useState<string[]>([]);
